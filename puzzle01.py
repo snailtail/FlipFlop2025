@@ -31,7 +31,6 @@ def solve(data: list[str], part2: bool = False, part3: bool = False):
 if __name__ == "__main__":
 
     data = setup("input01.dat")
-    print(data)
     print("Part 1:", solve(data))
     print("Part 2:", solve(data,part2=True))
     print("Part 3:", solve(data,part3=True))
