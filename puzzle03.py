@@ -17,12 +17,12 @@ def solve(data: list[tuple[int,int,int]], part: int = 1):
             else:
                 colors[item]=1
         sorted_colors = sorted(colors.items(), key=lambda kv: (kv[1], kv[0]))
-        return sorted_colors[-1][0]
+        r,g,b = sorted_colors[-1][0] 
+        return r,g,b
 
     elif part == 2:
         colors = []
         for r,g,b in data:
-            print(r,g,b)
             if r == g or r == b or g == b:
                 colors.append("special")
             elif r < g < b or g < r < b :
@@ -37,7 +37,6 @@ def solve(data: list[tuple[int,int,int]], part: int = 1):
     elif part == 3:
         colors = []
         for r,g,b in data:
-            print(r,g,b)
             if r == g or r == b or g == b:
                 colors.append("special")
             elif r < g < b or g < r < b :
@@ -56,7 +55,6 @@ def solve(data: list[tuple[int,int,int]], part: int = 1):
         raise NotImplementedError("Oh boy this should never happen..! part equals:",part)
 if __name__ == "__main__":
     data = setup("input03.dat")
-    print(data)
-    print("Part 1:", solve(data,part=1))
+    print("Part 1:",",".join([x for x in solve(data,part=1)]))
     print("Part 2:", solve(data,part=2))
     print("Part 3:", solve(data,part=3))
