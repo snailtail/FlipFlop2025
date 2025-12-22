@@ -18,11 +18,10 @@ settings.json
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-# Advent of Code puzzle inputs
-input_day*.dat
-# Allow committed fixtures for tests
-!testinput_day*.dat
-!*/testinput_day*.dat
+# FlipFlop puzzle inputs
+input_*.dat
+testinput_*.dat
+
 
 # Python
 __pycache__/
